@@ -13,16 +13,15 @@
       <img src={{item.image}} alt="">
     </div>
     <div class="ml-3">
-    <h3>{{item.name}}</h3>
+      <h3>{{item.name}}</h3>
+      <i class="font-weight-bold">{{currency item.price}}</i>
+    </div>
 
-    <i class="font-weight-bold">{{currency item.price}}</i>
-  </div>
-  <input
-   type="number"
-   class="ml-auto"
-   value={{item.count}}
-   {{on "input" (fn this.updateItemCount item)}}
-  />
+    <div class="ml-auto">
+      <button {{on "click" (fn this.incrementItemCount item)}}>+</button>
+      <span>{{item.count}}</span>
+      <button {{on "click" (fn this.decrementItemCount item)}}>-</button>
+    </div>
   </div>
   {{/each}}
   <section class="w-50 ml-auto text-right mb-5">
