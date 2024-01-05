@@ -7,6 +7,9 @@
 </form>
 <ol class="list-group">
   {{#each @model as |todo|}}
-    <li class="list-group-item">{{todo}}</li>
+    <li class="list-group-item">
+      {{todo}}
+      <button type="button" class="btn btn-danger btn-sm float-right" {{on "click" (fn this.delete @model todo)}}>Delete</button>
+    </li>
   {{/each}}
 </ol>

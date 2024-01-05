@@ -29,4 +29,16 @@ export default class TodoListComponent extends Component {
   onChange(e) {
     this.text = e.target.value;
   }
+
+  @action
+  delete(model, todo) {
+    // Ensure that model is an Ember Array
+    const emberArrayModel = A(model);
+
+    // Use removeObject on the Ember Array
+    emberArrayModel.removeObject(todo);
+
+    // Update the original model with the Ember Array
+    model.setObjects(emberArrayModel);
+  }
 }
