@@ -7,23 +7,27 @@
     <li class="breadcrumb-item">Shopping Cart</li>
   </ol>
 
+ {{#if this.cart.itemList.length}}
   {{#each this.cart.itemList as |item|}}
-  <div class="cart-item d-flex align-items-center">
-    <div class="cart-item-thumbnail">
-      <img src={{item.image}} alt="">
+    <div class="cart-item d-flex align-items-center">
+      <div class="cart-item-thumbnail">
+        <img src={{item.image}} alt="">
+      </div>
+      <div class="ml-3">
+        <h3>{{item.name}}</h3>
+        <i class="font-weight-bold">{{currency item.price}}</i>
+      </div>
+      <div class="ml-auto">
+        <button {{on "click" (fn this.incrementItemCount item)}}>+</button>
+        <span>{{item.count}}</span>
+        <button {{on "click" (fn this.decrementItemCount item)}}>-</button>
+      </div>
     </div>
-    <div class="ml-3">
-      <h3>{{item.name}}</h3>
-      <i class="font-weight-bold">{{currency item.price}}</i>
-    </div>
-
-    <div class="ml-auto">
-      <button {{on "click" (fn this.incrementItemCount item)}}>+</button>
-      <span>{{item.count}}</span>
-      <button {{on "click" (fn this.decrementItemCount item)}}>-</button>
-    </div>
-  </div>
   {{/each}}
+{{else}}
+  <LinkTo @route="index"><img class="mx-auto d-block" src="https://i.pinimg.com/736x/2e/ac/fa/2eacfa305d7715bdcd86bb4956209038.jpg" alt=""></LinkTo>
+{{/if}}
+
   <section class="w-50 ml-auto text-right mb-5">
     <div class="row">
       <span class="col">Subtotal</span>
