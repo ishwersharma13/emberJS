@@ -1,9 +1,16 @@
 {{page-title "MyEmberApp"}}
-<h1> <i class="bi bi-cart-dash-fill"></i>
-  E-Commerce</h1>
-    <LinkTo @route="todo">
-    <h3>
-      <i class="fa fa-list"></i>
-      TODO</h3></LinkTo>
+<LinkTo @route="index">
+  <h1>
+    <i class="bi bi-cart-dash-fill"></i>
+    E-Commerce
+  </h1>
+</LinkTo>
+
+<LinkTo @route="todo">
+  <h3>
+    <i class="fa fa-list"></i>
+    TODO
+  </h3>
+</LinkTo>
 
 {{outlet}}
