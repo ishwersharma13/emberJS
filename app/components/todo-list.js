@@ -6,7 +6,7 @@ import { A } from '@ember/array';
 
 export default class TodoListComponent extends Component {
   @tracked
-  text = "";
+  text = '';
 
   @action
   submit(model, e) {

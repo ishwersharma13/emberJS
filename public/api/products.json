@@ -2,11 +2,11 @@
   "products": [
     {
       "id": "1",
-      "name": "Beats Solo Wireless Headphones",
+      "name": "Sony Wireless Noise Cancelling Headphones",
       "description": "With up to 40 hours of battery life, Beats Solo Wireless is your perfect everyday headphone",
       "price": {
-        "original": 199.95,
-        "current": 99.98
+        "original": 299.95,
+        "current": 199.98
       },
       "features": [
         "High-performance wireless noise cancelling headphones in red",
@@ -19,22 +19,23 @@
       ],
       "colors": [
         {
-          "color": "red",
-          "image": "/assets/images/beats-solo-red.png"
-        },
-        {
           "color": "black",
           "image": "/assets/images/beats-solo-black.png"
+        },
+        {
+          "color": "red",
+          "image": "/assets/images/beats-solo-red.png"
         }
+
       ]
     },
     {
       "id": "2",
-      "name": "Nike Aire Force 1",
+      "name": "LITE RACER 3.0 SHOES",
       "description": "Debuting in 1982, the AF1 was the first basketball shoe to house Nike Air, revolutionizing the game while rapidly gaining traction around the world.",
       "price": {
-        "original": 109.95,
-        "current": 89.98
+        "original": 209.95,
+        "current": 189.98
       },
       "features": [
         "Full-grain leather in the upper adds a premium look and feel.",

@@ -1,7 +1,7 @@
-<!-- todo-list.hbs -->
+{{!-- todo-list.hbs --}}
 <form class="form-inline mb-3" onsubmit={{fn this.submit @model}}>
   <div class="form-group mr-2">
-    <input type="text" class="form-control" value={{this.text}} oninput={{fn this.onChange}}>
+    <input type="text" class="form-control" value={{this.text}} oninput={{this.onChange}}>
   </div>
   <button type="submit" class="btn btn-primary">Add Todo</button>
 </form>

@@ -18,9 +18,9 @@
         <i class="font-weight-bold">{{currency item.price}}</i>
       </div>
       <div class="ml-auto">
-        <button {{on "click" (fn this.incrementItemCount item)}}>+</button>
+        <button type="button" {{on "click" (fn this.incrementItemCount item)}}>+</button>
         <span>{{item.count}}</span>
-        <button {{on "click" (fn this.decrementItemCount item)}}>-</button>
+        <button type="button" {{on "click" (fn this.decrementItemCount item)}}>-</button>
       </div>
     </div>
   {{/each}}

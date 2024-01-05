@@ -5,7 +5,7 @@ export default class currency extends Helper {
     const [number] = param;
     const { sign = '₹' } = hash;
     const rupee = Math.floor(number);
-    let paise = Math.floor(number * 100 % 100);
+    let paise = Math.floor((number * 100) % 100);
     if (paise.toString().length === 1) {
       paise = '0' + paise;
     }

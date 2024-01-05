@@ -7,9 +7,9 @@ module.exports = function (defaults) {
     sassOptions: {
       extension: 'scss',
     },
-    fingerprint : {
-      exclude : ["assets/images"]
-    }
+    fingerprint: {
+      exclude: ['assets/images'],
+    },
   });
 
   return app.toTree();
